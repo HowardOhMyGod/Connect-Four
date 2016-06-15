@@ -111,7 +111,7 @@ int main(void){
 			printf("%40c", blank);
 			printf("Enter (0) to end the game\n");
 			scanf("%d",&playagain);
-			while(position != 1 && position != 0){
+			while(playagain != 1 && playagain != 0){
 				printf("%40c", blank);
 				printf("Enter 1 or 0\n");
 				printf("%40c", blank);

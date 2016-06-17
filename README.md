@@ -10,9 +10,9 @@
   
 #Why we develop this game
 
-  1.We love to play chess  
+  1.We love playing chess  
   2.AlphaGo just defeated human  
-  3.We also want to creat an AI to defeat human
+  3.We also want to creat an AI to defeat human  
   4.This game recall us our childhood   
   
 #We want to improve

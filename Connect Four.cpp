@@ -79,7 +79,7 @@ int main(void){
 			}
 			if(tieCheck(board) && checkWin(insertPos, board) != 1){ //和局
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY | FOREGROUND_RED);
-				printf("%45c", blank);
+				printf("%51c", blank);
 				printf("Tie ! \n\n\n");
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 			}
@@ -100,7 +100,7 @@ int main(void){
 			
 			if(tieCheck(board) && checkWin(insertPos, board) != 1){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY | FOREGROUND_RED);
-				printf("%45c", blank);
+				printf("%51c", blank);
 				printf("Tie ! \n\n\n");
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 			}
@@ -111,6 +111,7 @@ int main(void){
 			printf("%40c", blank);
 			printf("Enter (0) to end the game\n");
 			scanf("%d",&playagain);
+			
 			while(playagain != 1 && playagain != 0){
 				printf("%40c", blank);
 				printf("Enter 1 or 0\n");
@@ -296,10 +297,7 @@ int takeTurn(int round, char *board, char *player){
 		if(position == -1){
 			round++; //超過時間沒下換下一round
 		}
-
-	
 	}while(position == -1);//下round玩家輸入
-	
 	
 	if(position > 0){ //確認輸入值
 		while(test == 0){  //check whether insertion is complete, if complete, test = 1
@@ -311,7 +309,6 @@ int takeTurn(int round, char *board, char *player){
 					system("CLS"); //clear screen
 					animation(board, insertPos, position);
 					printBoard(board); //print new board
-					
 					break; //end for loop
 				}
 			else if(bottom == position - 1 && board[bottom] != ' '){ //欄的最頂部已滿
